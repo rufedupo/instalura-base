@@ -1,5 +1,7 @@
-import Title from '../components/Title'
+import Menu from '../src/components/commons/Menu'
 
 export default function Home() {
-  return <Title>Instalura</Title>
+  return (
+    <Menu />
+  )
 }
