@@ -1,4 +1,5 @@
-import Logo from '../Logo'
+import { Button } from '../Button'
+import Logo from '../../../theme/Logo'
 import { MenuWrapper } from './styles/MenuWrapper'
 
 const links = [
@@ -26,7 +27,7 @@ export default function Menu () {
         {
           links.map((link) => {
             return (
-              <li>
+              <li key={link.url}>
                 <a href={link.url}>
                   {link.text}
                 </a>
@@ -36,12 +37,12 @@ export default function Menu () {
         }
       </MenuWrapper.CentralSide>
       <MenuWrapper.RightSide>
-        <button>
+        <Button ghost variant="secondary.main">
           Entrar
-        </button>
-        <button>
+        </Button>
+        <Button variant="primary.main">
           Cadastrar
-        </button>
+        </Button>
       </MenuWrapper.RightSide>
     </MenuWrapper>
   )
