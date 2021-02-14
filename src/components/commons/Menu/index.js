@@ -17,7 +17,7 @@ const links = [
   }
 ]
 
-export default function Menu () {
+const Menu = () => {
   return (
     <MenuWrapper>
       <MenuWrapper.LeftSide>
@@ -47,3 +47,5 @@ export default function Menu () {
     </MenuWrapper>
   )
 }
+
+export default Menu
