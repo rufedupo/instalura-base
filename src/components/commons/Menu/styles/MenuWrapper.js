@@ -35,6 +35,7 @@ MenuWrapper.CentralSide = styled.div`
     text-decoration: none;
     color: #88989E;
     transition: 200ms ease-in-out;
+    cursor: pointer;
     &:hover,
     &:focus {
       font-weight: 500;
