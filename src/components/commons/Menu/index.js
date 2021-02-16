@@ -1,6 +1,7 @@
 import { Button } from '../Button'
 import Logo from '../../../theme/Logo'
 import { MenuWrapper } from './styles/MenuWrapper'
+import Text from '../../foundations/Text'
 
 const links = [
   {
@@ -28,9 +29,9 @@ const Menu = () => {
           links.map((link) => {
             return (
               <li key={link.url}>
-                <a href={link.url}>
+                <Text tag="a" variant="smallestException" href={link.url}>
                   {link.text}
-                </a>
+                </Text>
               </li>
             )
           })
