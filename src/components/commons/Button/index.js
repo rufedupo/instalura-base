@@ -17,9 +17,8 @@ export const Button = styled.button`
   padding: 12px 26px;
   font-weight: bold;
   opacity: 1;
-  ${(props) => {
-    return (props.ghost) ? ButtonGhost : ButtonDefault
-  }}
+  ${({theme}) => theme.typographyVariants['smallestException'] };
+  ${(props) => (props.ghost) ? ButtonGhost : ButtonDefault };
   transition: opacity ${({ theme }) => theme.transition};
   border-radius: ${({ theme }) => theme.borderRadius};
   &:hover,
