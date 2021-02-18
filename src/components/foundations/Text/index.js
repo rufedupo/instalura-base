@@ -1,9 +1,8 @@
 import PropTypes from 'prop-types'
 import styled from 'styled-components'
-import theme from '../../../theme'
 
 const TextBase = styled.span`
-  ${({variant}) => theme.typographyVariants[variant]}
+  ${(props) => props.theme.typographyVariants[props.variant]}
 `
 
 const Text = ({ tag, variant, children }) => {

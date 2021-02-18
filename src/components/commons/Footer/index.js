@@ -15,7 +15,7 @@ const FooterWrapper = styled.footer`
   }
 
   a {
-    color: ${({ theme }) => theme.colors.primary.main.color};
+    color: ${({ theme }) => theme.palette.primary.main.color};
     text-decoration: none;
   }
 `
