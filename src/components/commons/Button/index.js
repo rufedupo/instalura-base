@@ -1,6 +1,7 @@
 import styled, { css }  from "styled-components"
 import get from 'lodash/get'
 import { breakpointsMedia } from "../../../theme/utils/breakpointsMedia";
+import { propToStyle } from "../../../theme/utils/propToStyle";
 
 const ButtonGhost = css`
   color: ${(props) => { return get(props.theme, `palette.${props.variant}.color`);}};;
@@ -36,4 +37,7 @@ export const Button = styled.button`
   &:focus {
     opacity: .5;
   }
+
+  ${propToStyle('margin')}
+  ${propToStyle('display')}
 `
