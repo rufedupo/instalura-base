@@ -1,52 +1,50 @@
-import { Button } from '../Button'
-import Logo from '../../../theme/Logo'
-import { MenuWrapper } from './styles/MenuWrapper'
-import Text from '../../foundations/Text'
+/* eslint-disable linebreak-style */
+/* eslint-disable react/react-in-jsx-scope */
+import { Button } from '../Button';
+import Logo from '../../../theme/Logo';
+import { MenuWrapper } from './styles/MenuWrapper';
+import Text from '../../foundations/Text';
 
 const links = [
   {
     text: 'Home',
-    url: '/'
+    url: '/',
   },
   {
     text: 'Perguntas frequentes',
-    url: '/faq'
+    url: '/faq',
   },
   {
     text: 'Sobre',
-    url: '/about'
-  }
-]
+    url: '/about',
+  },
+];
 
-const Menu = () => {
-  return (
-    <MenuWrapper>
-      <MenuWrapper.LeftSide>
-        <Logo />
-      </MenuWrapper.LeftSide>
-      <MenuWrapper.CentralSide>
-        {
-          links.map((link) => {
-            return (
-              <li key={link.url}>
-                <Text tag="a" variant="smallestException" href={link.url}>
-                  {link.text}
-                </Text>
-              </li>
-            )
-          })
+const Menu = () => (
+  <MenuWrapper>
+    <MenuWrapper.LeftSide>
+      <Logo />
+    </MenuWrapper.LeftSide>
+    <MenuWrapper.CentralSide>
+      {
+          links.map((link) => (
+            <li key={link.url}>
+              <Text tag="a" variant="smallestException" href={link.url}>
+                {link.text}
+              </Text>
+            </li>
+          ))
         }
-      </MenuWrapper.CentralSide>
-      <MenuWrapper.RightSide>
-        <Button ghost variant="secondary.main">
-          Entrar
-        </Button>
-        <Button variant="primary.main">
-          Cadastrar
-        </Button>
-      </MenuWrapper.RightSide>
-    </MenuWrapper>
-  )
-}
+    </MenuWrapper.CentralSide>
+    <MenuWrapper.RightSide>
+      <Button ghost variant="secondary.main">
+        Entrar
+      </Button>
+      <Button variant="primary.main">
+        Cadastrar
+      </Button>
+    </MenuWrapper.RightSide>
+  </MenuWrapper>
+);
 
-export default Menu
+export default Menu;
