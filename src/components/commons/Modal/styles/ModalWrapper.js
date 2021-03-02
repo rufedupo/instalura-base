@@ -12,6 +12,7 @@ export const ModalWrapper = styled.div`
   bottom: 0;
   margin: auto;
   overflow: scroll;
+  z-index: 100;
   ${({ isOpen }) => {
     if (isOpen) {
       return css`
