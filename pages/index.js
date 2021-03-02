@@ -86,6 +86,11 @@ const Home = () => {
                   md: 'initial',
                 }}
                 display="block"
+                onClick={() => {
+                  // isModalOpen = true;
+                  console.log('isModalOpen', isModalOpen);
+                  setModalState(!isModalOpen); // novo state sendo atribuido
+                }}
               >
                 Cadastrar
               </Button>
