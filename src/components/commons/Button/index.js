@@ -1,4 +1,3 @@
-/* eslint-disable linebreak-style */
 import styled, { css } from 'styled-components';
 import get from 'lodash/get';
 import { breakpointsMedia } from '../../../theme/utils/breakpointsMedia';
@@ -14,7 +13,6 @@ const ButtonDefault = css`
   background-color: ${(props) => get(props.theme, `palette.${props.variant}.color`)};
 `;
 
-// eslint-disable-next-line import/prefer-default-export
 export const Button = styled.button`
   ${(props) => ((props.ghost) ? ButtonGhost : ButtonDefault)};
   ${({ theme }) => breakpointsMedia({

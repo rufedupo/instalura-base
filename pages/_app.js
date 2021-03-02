@@ -1,12 +1,10 @@
-/* eslint-disable react/prop-types */
-/* eslint-disable react/jsx-props-no-spreading */
-/* eslint-disable react/react-in-jsx-scope */
-
+import React from 'react';
 import { ThemeProvider } from 'styled-components';
 import Head from 'next/head';
 import theme from '../src/theme';
 import GlobalStyle from '../src/theme/GlobalStyle';
 
+// eslint-disable-next-line react/prop-types
 const App = ({ Component, pageProps }) => (
   <>
     <Head>

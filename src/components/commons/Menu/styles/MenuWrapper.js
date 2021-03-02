@@ -1,4 +1,4 @@
-import styled, { css } from 'styled-components'
+import styled, { css } from 'styled-components';
 import { breakpointsMedia } from '../../../../theme/utils/breakpointsMedia';
 
 export const MenuWrapper = styled.nav`
@@ -25,9 +25,9 @@ export const MenuWrapper = styled.nav`
     `,
     xl: css`
       max-width: 1222px;
-    `
+    `,
   })}
-`
+`;
 
 MenuWrapper.LeftSide = styled.div`
   padding: 0;
@@ -39,9 +39,9 @@ MenuWrapper.LeftSide = styled.div`
       height: 32px;
       order: initial;
       padding-right: 16px;
-    `
+    `,
   })}
-`
+`;
 
 MenuWrapper.CentralSide = styled.div`
   padding: 16px;
@@ -80,15 +80,15 @@ MenuWrapper.CentralSide = styled.div`
       color: #070C0E;
     }
     ${breakpointsMedia({
-      xs: css`
-        ${({theme}) => theme.typographyVariants.smallestException}
+    xs: css`
+        ${({ theme }) => theme.typographyVariants.smallestException}
       `,
-      md: css`
-        ${({theme}) => theme.typographyVariants.paragraph1}
-      `
-    })}
+    md: css`
+        ${({ theme }) => theme.typographyVariants.paragraph1}
+      `,
+  })}
   }
-`
+`;
 
 MenuWrapper.RightSide = styled.div`
   padding: 0;
@@ -102,4 +102,4 @@ MenuWrapper.RightSide = styled.div`
       order: initial;
     `,
   })}
-`
+`;

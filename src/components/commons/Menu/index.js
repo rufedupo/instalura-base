@@ -1,5 +1,4 @@
-/* eslint-disable linebreak-style */
-/* eslint-disable react/react-in-jsx-scope */
+import React from 'react';
 import { Button } from '../Button';
 import Logo from '../../../theme/Logo';
 import { MenuWrapper } from './styles/MenuWrapper';

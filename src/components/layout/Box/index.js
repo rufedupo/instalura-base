@@ -1,5 +1,3 @@
-/* eslint-disable linebreak-style */
-/* eslint-disable import/prefer-default-export */
 import styled from 'styled-components';
 import { propToStyle } from '../../../theme/utils/propToStyle';
 
@@ -9,6 +7,7 @@ export const Box = styled.div`
   ${propToStyle('justifyContent')}
   ${propToStyle('flex')}
   ${propToStyle('flexWrap')}
+  ${propToStyle('backgroundColor')}
   ${propToStyle('backgroundImage')}
   ${propToStyle('backgroundRepeat')}
   ${propToStyle('backgroundPosition')}
