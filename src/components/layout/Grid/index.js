@@ -118,6 +118,8 @@ const Col = styled.div`
   ${propToStyle('justifyContent')}
   ${propToStyle('flexDirection')}
   ${propToStyle('marginBottom')}
+  ${propToStyle('paddingRight')}
+
 `;
 
 Col.defaultProps = {
@@ -132,6 +134,10 @@ export const Grid = {
     flex-wrap: wrap;
     margin-right: -16px;
     margin-left: -16px;
+    ${propToStyle('flex')}
+    ${propToStyle('marginLeft')}
+    ${propToStyle('marginRight')}
+    ${propToStyle('justifyContent')}
   `,
   Col,
 };
