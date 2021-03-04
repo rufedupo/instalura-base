@@ -1,3 +1,4 @@
+/* eslint-disable max-len */
 import React from 'react';
 import { Button } from '../src/components/commons/Button';
 import Menu from '../src/components/commons/Menu';
@@ -6,6 +7,7 @@ import Text from '../src/components/foundations/Text';
 import { Grid } from '../src/components/layout/Grid';
 import { Box } from '../src/components/layout/Box';
 import Modal from '../src/components/commons/Modal';
+import FormRegister from '../src/components/patterns/FormRegister';
 
 const Home = () => {
   const [isModalOpen, setModalState] = React.useState(false);
@@ -28,14 +30,7 @@ const Home = () => {
         }}
       >
         {(propsDoModal) => (
-          <Box
-            backgroundColor="white"
-            {...propsDoModal}
-          >
-            <div>
-              Nosso conteúdo pro modal
-            </div>
-          </Box>
+          <FormRegister propsDoModal={propsDoModal} />
         )}
       </Modal>
 
@@ -75,8 +70,7 @@ const Home = () => {
                   md: 'left',
                 }}
               >
-                Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-                Lorem Ipsum has been the industrys standard dummy text ever since the 1500s.
+                O bom vizinho olha além dos incidentes exteriores e distingue aquelas qualidades interiores que fazem de todos os homens humanos, e portanto, irmãos.
               </Text>
 
               <Button
