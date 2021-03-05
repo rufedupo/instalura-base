@@ -6,6 +6,7 @@ import TextField from '../../forms/TextField';
 import { Box } from '../../layout/Box';
 import { Grid } from '../../layout/Grid';
 import Text from '../../foundations/Text';
+import loadingAnimation from './animations/loading.json';
 import errorAnimation from './animations/error.json';
 import successAnimation from './animations/success.json';
 
@@ -40,7 +41,7 @@ function FormContent() {
       onSubmit={(event) => {
         event.preventDefault();
         setIsFormSubmitted(true);
-
+        setSubmissionStatus(formStates.LOADING);
         const userDTO = {
           name: userInfo.name,
           username: userInfo.usuario,
@@ -108,6 +109,19 @@ function FormContent() {
         Cadastrar
       </Button>
 
+      {isFormSubmitted && submissionStatus === formStates.LOADING && (
+        <Box
+          display="flex"
+          justifyContent="center"
+        >
+          <Lottie
+            width="150px"
+            height="150px"
+            config={{ animationData: loadingAnimation, loop: false, autoplay: true }}
+          />
+        </Box>
+      )}
+
       {isFormSubmitted && submissionStatus === formStates.DONE && (
         <Box
           display="flex"
@@ -120,7 +134,7 @@ function FormContent() {
           />
         </Box>
       )}
-      
+
       {isFormSubmitted && submissionStatus === formStates.ERROR && (
         <Box
           display="flex"
